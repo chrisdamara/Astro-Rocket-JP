@@ -15,7 +15,7 @@
   <text x="600" y="410" font-size="96" text-anchor="middle" letter-spacing="-4"
         fill="#eff6ff"
         font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif"
-        font-weight="800">Astro Rocket</text>
+        font-weight="800">Just Pixel</text>
 
   <!-- Divider -->
   <line x1="380" y1="436" x2="820" y2="436" stroke="#93c5fd" stroke-width="1" stroke-opacity="0.35"/>
