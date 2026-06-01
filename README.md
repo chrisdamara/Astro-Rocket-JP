@@ -32,7 +32,7 @@ Just Pixel is a **launch-ready starter theme** for web designers, developers, bl
 
 It ships with a full blog, a complete component library, a built-in SEO layer, dark mode, a contact form, and 12 colour themes you can switch with one click. It's built on Astro 6 and Tailwind CSS v4.
 
-**[Live demo → astrorocket.dev](https://astrorocket.dev)** · **[Built by Hans Martens → hansmartens.dev](https://hansmartens.dev)**
+**[Live demo → astrorocket.dev](https://astrorocket.dev)** · **[Built by Just Pixel → hansmartens.dev](https://hansmartens.dev)**
 
 > **Just Pixel is a fork of [Velocity](https://github.com/southwellmedia/velocity) by [Southwell Media](https://southwellmedia.com).** Velocity is the foundation — a powerful Astro boilerplate with a comprehensive design system and component library. Full credit to the Southwell Media team for that work. Just Pixel builds on it with a different goal: a complete, ready-to-launch website where you only change the text to make it your own.
 
@@ -54,7 +54,7 @@ The following changes were made to the free Velocity theme to create Just Pixel:
 | **Colour mode** | Binary `localStorage` toggle | 3-state picker — System / Light / Dark in `localStorage`, with `prefers-color-scheme` live tracking under 'System' (see [Colour Mode](#colour-mode)) |
 | **Target audience** | Developers & agencies | Web designers, developers, bloggers, and portfolio sites |
 | **Ready to launch** | Boilerplate starting point | Fully styled pages — replace the text and your site is live |
-| **Maintained by** | Southwell Media | Hans Martens |
+| **Maintained by** | Southwell Media | Just Pixel |
 
 ---
 
@@ -807,5 +807,5 @@ MIT License — see [LICENSE](LICENSE) for details.
 
 ---
 
-**Just Pixel** is designed and maintained by [Hans Martens](https://hansmartens.dev).
+**Just Pixel** is designed and maintained by [Just Pixel](https://hansmartens.dev).
 Built on [Velocity](https://github.com/southwellmedia/velocity) — the original theme by [Southwell Media](https://southwellmedia.com).

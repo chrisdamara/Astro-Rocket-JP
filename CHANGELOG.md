@@ -43,7 +43,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - **Blog index + post pages synced from `hansmartens.dev`** — refreshed `ArticleHero`, `BlogCard`, `BlogImageSVG`, `TableOfContents`, and the new "Follow along" section now matches between the blog index and individual posts.
 - **Layout max-width** — single project pages, blog post pages, and the projects index now share the same `max-w-7xl` section width as the rest of the site.
 - **Contact copy** — homepage CTA + contact hero clarified to scope work to new builds only; contact form heading "Send a message" → "Project details".
-- **Homepage projects section** — replaced placeholder projects with Just Pixel + Hans Martens Dev; redesigned section to mirror the projects-index layout 1:1.
+- **Homepage projects section** — replaced placeholder projects with Just Pixel + Lightwoods Tree Surgery; redesigned section to mirror the projects-index layout 1:1.
 - **`global.css` + all 12 theme tokens** (`amber`, `blue`, `cyan`, `emerald`, `green`, `indigo`, `lime`, `magenta`, `orange`, `purple`, `sky`, `teal`, `violet`) received small token tweaks for header neutrality and the new arrow-slide pattern.
 - **404 page rewritten** with the same hero pattern as the rest of the marketing pages.
 

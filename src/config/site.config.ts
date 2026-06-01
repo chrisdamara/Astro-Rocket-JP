@@ -125,7 +125,7 @@ const siteConfig: SiteConfig = {
     'Just Pixel — A production-ready Astro 6 starter with 12 beautiful themes, 57+ components, built-in i18n, dark mode and a fast, modern foundation to build anything on.',
   url: SITE_URL || 'https://astrorocket.dev',
   ogImage: '/og-default.svg',
-  author: 'Hans Martens',
+  author: 'Just Pixel',
   email: 'hello@hansmartens.dev',
   address: {
     street: '',

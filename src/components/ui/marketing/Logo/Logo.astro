@@ -50,5 +50,14 @@ const letter = letterProp ?? siteConfig.name.charAt(0).toUpperCase();
   aria-label={siteConfig.branding.logo.alt}
   role="img"
 >
-  {letter}
+  <img
+  src="/just-pixel-new-logo.svg"
+  alt={siteConfig.branding.logo.alt}
+  class="w-full h-full object-contain"
+  style="filter: var(--logo-color-filter, none);"
+  loading="eager"
+  decoding="async"
+  width="100%"
+  height="100%"
+/>
 </span>

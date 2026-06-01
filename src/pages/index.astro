@@ -11,7 +11,7 @@ import LetterGlitchBand from '@/components/patterns/LetterGlitchBand.astro';
 import { getCollection } from 'astro:content';
 import siteConfig from '@/config/site.config';
 
-const projectItems = await getCollection('projects');
+const projectItems = await getCollection('projects', ({ data }) => !data.draft);
 const featuredProjects = projectItems
   .filter((p) => p.data.featured)
   .sort((a, b) => a.data.order - b.data.order)
