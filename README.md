@@ -1,28 +1,12 @@
-<p align="center">
-  <img src="public/readme-hero.svg" alt="Just Pixel" width="880" />
-</p>
 
-<p align="center">
-  <strong>Just Pixel</strong> — A production-ready Astro 6 starter theme. Change the text, launch your site.
-</p>
 
-<p align="center">
-  <a href="https://astro.build"><img src="https://img.shields.io/badge/Astro-6.0-bc52ee?logo=astro&logoColor=white" alt="Astro" /></a>
-  <a href="https://tailwindcss.com"><img src="https://img.shields.io/badge/Tailwind-4.0-38bdf8?logo=tailwindcss&logoColor=white" alt="Tailwind CSS" /></a>
-  <a href="https://www.typescriptlang.org"><img src="https://img.shields.io/badge/TypeScript-5.7-3178c6?logo=typescript&logoColor=white" alt="TypeScript" /></a>
-  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-22c55e" alt="License" /></a>
-  <a href="https://github.com/hansmartensdev/astro-rocket"><img src="https://img.shields.io/github/stars/hansmartensdev/astro-rocket?style=flat&label=%E2%AD%90%20Star%20on%20GitHub&color=f59e0b" alt="Star on GitHub" /></a>
-  <a href="https://github.com/hansmartensdev/astro-rocket"><img src="https://visitor-badge.laobi.icu/badge?page_id=hansmartensdev.astro-rocket" alt="Visitors" /></a>
-</p>
+**Just Pixel** — A production-ready Astro 6 starter theme. Change the text, launch your site.
 
-<p align="center">
-  <img src="public/readme-lighthouse.svg" alt="Lighthouse 100/100/100/100 — Performance, Accessibility, Best Practices, SEO" width="880" />
-</p>
 
-<p align="center">
-  <em>Perfect Lighthouse scores.</em>
-</p>
 
+
+
+*Perfect Lighthouse scores.*
 
 ---
 
@@ -42,45 +26,49 @@ It ships with a full blog, a complete component library, a built-in SEO layer, d
 
 The following changes were made to the free Velocity theme to create Just Pixel:
 
-| Change | Velocity | Just Pixel |
-|--------|----------|--------------|
-| **Theme switching** | Edit a CSS import file and rebuild | 12 colour swatches in the header — click one and the logo badge, blog images, and every brand color update live on screen. No file edits, no rebuilds. Selector can be removed from the header once you've chosen a color. |
-| **Colour themes** | 1 default theme | 12 Tailwind-based themes — all 12 shown as swatches in the header selector (Orange, Amber, Lime, Emerald, Teal, Cyan, Sky, Blue, Indigo, Violet, Purple, Magenta) |
-| **Logo badge** | Requires a custom logo file | Auto-generated monogram badge — first letter of your site name on brand color, live-updates with active theme |
-| **Favicon** | Static file to replace manually | Auto-generated SVG favicon — first letter + brand color, pre-rendered at build time from `site.config.ts`, no design tools needed |
-| **Blog image gradients** | Plain image containers | Every blog cover and card uses a brand-color gradient background that updates live when the active theme changes |
-| **Icon system** | Basic SVG `Icon` component | Unified `Icon` component powered by Iconify — 350+ Lucide UI icons + 3000+ Simple Icons brand icons |
-| **Typing effect** | Not included | Hero section includes an animated typing effect |
-| **Colour mode** | Binary `localStorage` toggle | 3-state picker — System / Light / Dark in `localStorage`, with `prefers-color-scheme` live tracking under 'System' (see [Colour Mode](#colour-mode)) |
-| **Target audience** | Developers & agencies | Web designers, developers, bloggers, and portfolio sites |
-| **Ready to launch** | Boilerplate starting point | Fully styled pages — replace the text and your site is live |
-| **Maintained by** | Southwell Media | Just Pixel |
+
+| Change                   | Velocity                           | Just Pixel                                                                                                                                                                                                                 |
+| ------------------------ | ---------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Theme switching**      | Edit a CSS import file and rebuild | 12 colour swatches in the header — click one and the logo badge, blog images, and every brand color update live on screen. No file edits, no rebuilds. Selector can be removed from the header once you've chosen a color. |
+| **Colour themes**        | 1 default theme                    | 12 Tailwind-based themes — all 12 shown as swatches in the header selector (Orange, Amber, Lime, Emerald, Teal, Cyan, Sky, Blue, Indigo, Violet, Purple, Magenta)                                                          |
+| **Logo badge**           | Requires a custom logo file        | Auto-generated monogram badge — first letter of your site name on brand color, live-updates with active theme                                                                                                              |
+| **Favicon**              | Static file to replace manually    | Auto-generated SVG favicon — first letter + brand color, pre-rendered at build time from `site.config.ts`, no design tools needed                                                                                          |
+| **Blog image gradients** | Plain image containers             | Every blog cover and card uses a brand-color gradient background that updates live when the active theme changes                                                                                                           |
+| **Icon system**          | Basic SVG `Icon` component         | Unified `Icon` component powered by Iconify — 350+ Lucide UI icons + 3000+ Simple Icons brand icons                                                                                                                        |
+| **Typing effect**        | Not included                       | Hero section includes an animated typing effect                                                                                                                                                                            |
+| **Colour mode**          | Binary `localStorage` toggle       | 3-state picker — System / Light / Dark in `localStorage`, with `prefers-color-scheme` live tracking under 'System' (see [Colour Mode](#colour-mode))                                                                       |
+| **Target audience**      | Developers & agencies              | Web designers, developers, bloggers, and portfolio sites                                                                                                                                                                   |
+| **Ready to launch**      | Boilerplate starting point         | Fully styled pages — replace the text and your site is live                                                                                                                                                                |
+| **Maintained by**        | Southwell Media                    | Just Pixel                                                                                                                                                                                                                 |
+
 
 ---
 
 ## Key Features
 
-| Feature | Description |
-|---------|-------------|
-| **Astro 6** | Latest version with Content Layer API, security features, and performance optimizations |
-| **Tailwind CSS v4** | CSS-first configuration with OKLCH color system and fluid typography |
-| **12 Colour Themes** | All 12 colour swatches are shown in the header dropdown — click one and the logo badge, blog image gradients, and every brand color update live instantly. No file edits, no rebuilds. The selector can be removed from the header once you've settled on a color. |
-| **Scroll Progress Bar** | A thin 2px brand-coloured bar on the header edge that fills as you scroll. Enabled on the homepage (above the floating header), blog index, and post pages (below the solid header). Controlled via `showScrollProgress` and `scrollProgressPosition` props on the Header component. |
-| **Design Tokens** | Three-tier token architecture (reference → semantic → component) |
-| **57 Components** | 33 UI, 7 patterns, 1 hero, 4 layout, 4 blog, 7 landing, 3 SEO — all accessible with TypeScript |
-| **Auto Logo & Favicon** | First letter of your site name on brand color — generated automatically from `site.config.ts`, no design tools needed |
-| **Icon System** | Unified `Icon` component (Astro + React) — 350+ [Lucide](https://lucide.dev) UI icons and 3000+ [Simple Icons](https://simpleicons.org) brand icons via Iconify |
-| **Typing Effect** | Animated typing effect in the hero section |
-| **Page Animations** | Smooth page transitions via Astro View Transitions, scroll-triggered counter and score animations, scroll-reactive header, card hover effects, and a full suite of UI micro-animations — all with reduced-motion support |
-| **SEO Toolkit** | Meta tags, JSON-LD structured data, sitemap, and robots.txt |
-| **Static OG Image** | A polished default Open Graph image serves as social preview for all pages — no build-time generation required |
-| **Colour Mode** | 3-state picker — **System / Light / Dark** with `localStorage` persistence and live OS-preference tracking under 'System'; surfaced as a pill dropdown in the header (and inside the mobile menu) |
-| **Content Collections** | Type-safe blog, pages, authors, and FAQs with Zod validation |
-| **API Routes** | Contact form and newsletter endpoints with validation |
-| **Table of Contents** | Optional table of contents on blog posts, auto-generated from MDX headings, with three layouts: inline card, sticky desktop sidebar, or `auto` (sidebar on `xl+`, inline card below). Includes `IntersectionObserver` scroll-spy. Off by default; per-post `toc: false` in frontmatter hides on a single post |
-| **Blog Comments (Giscus)** | Optional comments at the bottom of blog posts, powered by [Giscus](https://giscus.app) and GitHub Discussions. **Lazy-loaded** so readers who don't scroll to comments pay zero network cost; reserved `min-height` prevents CLS. Off by default; per-post `comments: false` in frontmatter hides on a single post |
-| **Independent Footer Menu** | Header and footer navigation configured separately in `nav.config.ts` (`navItems`, `footerNavItems`, `legalLinks`) — add a Privacy or Imprint link to the footer without cluttering the main nav |
-| **React Islands** | Optional client-side interactivity where needed |
+
+| Feature                     | Description                                                                                                                                                                                                                                                                                                        |
+| --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Astro 6**                 | Latest version with Content Layer API, security features, and performance optimizations                                                                                                                                                                                                                            |
+| **Tailwind CSS v4**         | CSS-first configuration with OKLCH color system and fluid typography                                                                                                                                                                                                                                               |
+| **12 Colour Themes**        | All 12 colour swatches are shown in the header dropdown — click one and the logo badge, blog image gradients, and every brand color update live instantly. No file edits, no rebuilds. The selector can be removed from the header once you've settled on a color.                                                 |
+| **Scroll Progress Bar**     | A thin 2px brand-coloured bar on the header edge that fills as you scroll. Enabled on the homepage (above the floating header), blog index, and post pages (below the solid header). Controlled via `showScrollProgress` and `scrollProgressPosition` props on the Header component.                               |
+| **Design Tokens**           | Three-tier token architecture (reference → semantic → component)                                                                                                                                                                                                                                                   |
+| **57 Components**           | 33 UI, 7 patterns, 1 hero, 4 layout, 4 blog, 7 landing, 3 SEO — all accessible with TypeScript                                                                                                                                                                                                                     |
+| **Auto Logo & Favicon**     | First letter of your site name on brand color — generated automatically from `site.config.ts`, no design tools needed                                                                                                                                                                                              |
+| **Icon System**             | Unified `Icon` component (Astro + React) — 350+ [Lucide](https://lucide.dev) UI icons and 3000+ [Simple Icons](https://simpleicons.org) brand icons via Iconify                                                                                                                                                    |
+| **Typing Effect**           | Animated typing effect in the hero section                                                                                                                                                                                                                                                                         |
+| **Page Animations**         | Smooth page transitions via Astro View Transitions, scroll-triggered counter and score animations, scroll-reactive header, card hover effects, and a full suite of UI micro-animations — all with reduced-motion support                                                                                           |
+| **SEO Toolkit**             | Meta tags, JSON-LD structured data, sitemap, and robots.txt                                                                                                                                                                                                                                                        |
+| **Static OG Image**         | A polished default Open Graph image serves as social preview for all pages — no build-time generation required                                                                                                                                                                                                     |
+| **Colour Mode**             | 3-state picker — **System / Light / Dark** with `localStorage` persistence and live OS-preference tracking under 'System'; surfaced as a pill dropdown in the header (and inside the mobile menu)                                                                                                                  |
+| **Content Collections**     | Type-safe blog, pages, authors, and FAQs with Zod validation                                                                                                                                                                                                                                                       |
+| **API Routes**              | Contact form and newsletter endpoints with validation                                                                                                                                                                                                                                                              |
+| **Table of Contents**       | Optional table of contents on blog posts, auto-generated from MDX headings, with three layouts: inline card, sticky desktop sidebar, or `auto` (sidebar on `xl+`, inline card below). Includes `IntersectionObserver` scroll-spy. Off by default; per-post `toc: false` in frontmatter hides on a single post      |
+| **Blog Comments (Giscus)**  | Optional comments at the bottom of blog posts, powered by [Giscus](https://giscus.app) and GitHub Discussions. **Lazy-loaded** so readers who don't scroll to comments pay zero network cost; reserved `min-height` prevents CLS. Off by default; per-post `comments: false` in frontmatter hides on a single post |
+| **Independent Footer Menu** | Header and footer navigation configured separately in `nav.config.ts` (`navItems`, `footerNavItems`, `legalLinks`) — add a Privacy or Imprint link to the footer without cluttering the main nav                                                                                                                   |
+| **React Islands**           | Optional client-side interactivity where needed                                                                                                                                                                                                                                                                    |
+
 
 ### Internationalization (i18n)
 
@@ -160,7 +148,7 @@ The whole system is build-time. No client-side routing, no framework hydration f
 
 #### Comparing to Southwell Media's CLI
 
-[`create-velocity-astro`](https://github.com/southwellmedia/create-velocity-astro) is the upstream Velocity CLI for scaffolding a fresh project with i18n. **It is not needed for Just Pixel** — the equivalent feature is built in here. If you ever do run it, run it in an **empty directory**: it scaffolds a fresh Velocity project and will overwrite an existing directory (including a cloned Just Pixel repo) if you confirm the "Directory already exists" prompt.
+`[create-velocity-astro](https://github.com/southwellmedia/create-velocity-astro)` is the upstream Velocity CLI for scaffolding a fresh project with i18n. **It is not needed for Just Pixel** — the equivalent feature is built in here. If you ever do run it, run it in an **empty directory**: it scaffolds a fresh Velocity project and will overwrite an existing directory (including a cloned Just Pixel repo) if you confirm the "Directory already exists" prompt.
 
 ---
 
@@ -237,18 +225,20 @@ astro-rocket/
 
 ## Commands
 
-| Command | Description |
-|---------|-------------|
-| `pnpm dev` | Start development server with hot reload |
-| `pnpm build` | Build for production |
-| `pnpm preview` | Preview production build locally |
-| `pnpm check` | Run Astro type checker |
-| `pnpm lint` | Run ESLint |
-| `pnpm lint:fix` | Fix ESLint issues |
-| `pnpm format` | Format code with Prettier |
-| `pnpm format:check` | Check code formatting |
-| `pnpm test` | Run Vitest tests |
-| `pnpm test:e2e` | Run Playwright E2E tests |
+
+| Command             | Description                              |
+| ------------------- | ---------------------------------------- |
+| `pnpm dev`          | Start development server with hot reload |
+| `pnpm build`        | Build for production                     |
+| `pnpm preview`      | Preview production build locally         |
+| `pnpm check`        | Run Astro type checker                   |
+| `pnpm lint`         | Run ESLint                               |
+| `pnpm lint:fix`     | Fix ESLint issues                        |
+| `pnpm format`       | Format code with Prettier                |
+| `pnpm format:check` | Check code formatting                    |
+| `pnpm test`         | Run Vitest tests                         |
+| `pnpm test:e2e`     | Run Playwright E2E tests                 |
+
 
 ---
 
@@ -340,23 +330,14 @@ OKLCH values are `oklch(lightness chroma hue)`. To shift your brand to blue, cha
 
 1. Duplicate `src/styles/themes/default.css` as your starting point
 2. Implement all ~35 semantic tokens for both `:root` (light) and `.dark` (dark):
-
-   **Backgrounds**: `--background`, `--background-secondary`, `--background-tertiary`, `--background-elevated`
-
+  **Backgrounds**: `--background`, `--background-secondary`, `--background-tertiary`, `--background-elevated`
    **Foregrounds**: `--foreground`, `--foreground-secondary`, `--foreground-muted`, `--foreground-subtle`
-
    **Borders**: `--border`, `--border-strong`, `--border-subtle`
-
    **Interactive**: `--primary`, `--primary-hover`, `--primary-foreground`, `--secondary`, `--secondary-hover`, `--secondary-foreground`, `--accent`, `--accent-hover`, `--accent-light`
-
    **Surfaces**: `--muted`, `--muted-foreground`, `--card`, `--card-border`, `--input-bg`, `--input-border`, `--input-focus`, `--ring`
-
    **Destructive**: `--destructive`, `--destructive-foreground`
-
    **Gradients**: `--gradient-start`, `--gradient-end`
-
    **Invert sections**: `--surface-invert`, `--surface-invert-secondary`, `--surface-invert-tertiary`, `--on-invert`, `--on-invert-secondary`, `--on-invert-muted`, `--border-invert`, `--border-invert-strong`
-
 3. Update the import in `src/styles/tokens/colors.css` to point to your new theme file
 
 ### Colour Mode
@@ -365,11 +346,13 @@ Just Pixel ships a 3-state colour-mode system — **System / Light / Dark** — 
 
 State contract:
 
-| Storage / DOM | Values | Role |
-|---|---|---|
-| `localStorage.theme` | `'system' \| 'light' \| 'dark'` | The user's saved choice (default `'system'`) |
-| `<html data-theme-mode="…">` | mirrors the saved mode | Drives the trigger icon (monitor / sun / moon) via CSS |
-| `<html>.dark` | present or absent | Resolved appearance — Tailwind dark variant keys off this |
+
+| Storage / DOM                | Values                        | Role                                                      |
+| ---------------------------- | ----------------------------- | --------------------------------------------------------- |
+| `localStorage.theme`         | `'system' | 'light' | 'dark'` | The user's saved choice (default `'system'`)              |
+| `<html data-theme-mode="…">` | mirrors the saved mode        | Drives the trigger icon (monitor / sun / moon) via CSS    |
+| `<html>.dark`                | present or absent             | Resolved appearance — Tailwind dark variant keys off this |
+
 
 Defaults are seeded directly on the `<html>` element in `src/layouts/BaseLayout.astro` so JS-disabled visitors still see a sensible state:
 
@@ -397,13 +380,15 @@ The full design — bootstrap script, dropdown anatomy, the live "Currently dark
 
 Foreground tokens are documented with their contrast ratios inline. When customizing, maintain these minimums:
 
-| Token | Minimum ratio | Standard |
-|-------|:---:|:---:|
-| `--foreground` | 7:1 | WCAG AAA |
-| `--foreground-secondary` | 7:1 | WCAG AAA |
-| `--foreground-muted` | 4.5:1 | WCAG AA |
-| `--foreground-subtle` | 4.5:1 | WCAG AA |
-| Status `-foreground` tokens | 4.5:1 | WCAG AA (on their `-light` bg) |
+
+| Token                       | Minimum ratio | Standard                       |
+| --------------------------- | ------------- | ------------------------------ |
+| `--foreground`              | 7:1           | WCAG AAA                       |
+| `--foreground-secondary`    | 7:1           | WCAG AAA                       |
+| `--foreground-muted`        | 4.5:1         | WCAG AA                        |
+| `--foreground-subtle`       | 4.5:1         | WCAG AA                        |
+| Status `-foreground` tokens | 4.5:1         | WCAG AA (on their `-light` bg) |
+
 
 ### Using Design Tokens
 
@@ -432,96 +417,116 @@ Just Pixel includes 57 components across 7 categories. All UI components use [cl
 
 #### Form (`ui/form/`)
 
-| Component | Description |
-|-----------|-------------|
-| Button | Interactive button with primary, secondary, outline, ghost, destructive variants and loading state |
-| Input | Text input with label, hint, and error states |
-| Textarea | Multi-line text input |
-| Select | Dropdown selection |
-| Checkbox | Boolean toggle with indeterminate state |
-| Radio | Single selection from group |
-| Switch | Toggle switch input |
+
+| Component | Description                                                                                        |
+| --------- | -------------------------------------------------------------------------------------------------- |
+| Button    | Interactive button with primary, secondary, outline, ghost, destructive variants and loading state |
+| Input     | Text input with label, hint, and error states                                                      |
+| Textarea  | Multi-line text input                                                                              |
+| Select    | Dropdown selection                                                                                 |
+| Checkbox  | Boolean toggle with indeterminate state                                                            |
+| Radio     | Single selection from group                                                                        |
+| Switch    | Toggle switch input                                                                                |
+
 
 #### Data Display (`ui/data-display/`)
 
-| Component | Description |
-|-----------|-------------|
-| Card | Content container with variant, padding, and hover options |
-| Badge | Status labels and tags with contextual variants |
-| Avatar | User images with fallback |
-| AvatarGroup | Grouped avatar display with overlap |
-| Table | Styled data table |
-| Pagination | Page navigation controls |
-| Progress | Progress bar indicator |
-| Skeleton | Loading placeholders |
+
+| Component   | Description                                                |
+| ----------- | ---------------------------------------------------------- |
+| Card        | Content container with variant, padding, and hover options |
+| Badge       | Status labels and tags with contextual variants            |
+| Avatar      | User images with fallback                                  |
+| AvatarGroup | Grouped avatar display with overlap                        |
+| Table       | Styled data table                                          |
+| Pagination  | Page navigation controls                                   |
+| Progress    | Progress bar indicator                                     |
+| Skeleton    | Loading placeholders                                       |
+
 
 #### Feedback (`ui/feedback/`)
 
-| Component | Description |
-|-----------|-------------|
-| Alert | Contextual feedback messages (info, success, warning, error) |
-| Toast | Temporary notification messages |
-| Tooltip | Hover tooltips with positioning |
+
+| Component | Description                                                  |
+| --------- | ------------------------------------------------------------ |
+| Alert     | Contextual feedback messages (info, success, warning, error) |
+| Toast     | Temporary notification messages                              |
+| Tooltip   | Hover tooltips with positioning                              |
+
 
 #### Overlay (`ui/overlay/`)
 
-| Component | Description |
-|-----------|-------------|
-| Dialog | Modal overlay |
-| Dropdown | Menu with trigger |
-| Tabs | Horizontal tabbed content panels |
-| VerticalTabs | Vertical tab navigation |
-| Accordion | Collapsible content sections |
+
+| Component    | Description                      |
+| ------------ | -------------------------------- |
+| Dialog       | Modal overlay                    |
+| Dropdown     | Menu with trigger                |
+| Tabs         | Horizontal tabbed content panels |
+| VerticalTabs | Vertical tab navigation          |
+| Accordion    | Collapsible content sections     |
+
 
 #### Layout (`ui/layout/`)
 
-| Component | Description |
-|-----------|-------------|
+
+| Component | Description                     |
+| --------- | ------------------------------- |
 | Separator | Visual divider between sections |
+
 
 #### Primitives (`ui/primitives/`)
 
-| Component | Description |
-|-----------|-------------|
-| Icon | Unified icon component (Astro + React) powered by Iconify. Supports all [Lucide](https://lucide.dev) icons (`lucide:*`) and all [Simple Icons](https://simpleicons.org) brand icons (`simple-icons:*`). Includes shorthand names for common social and brand icons. Five size variants: `xs`, `sm`, `md`, `lg`, `xl`. |
+
+| Component | Description                                                                                                                                                                                                                                                                                                           |
+| --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Icon      | Unified icon component (Astro + React) powered by Iconify. Supports all [Lucide](https://lucide.dev) icons (`lucide:*`) and all [Simple Icons](https://simpleicons.org) brand icons (`simple-icons:*`). Includes shorthand names for common social and brand icons. Five size variants: `xs`, `sm`, `md`, `lg`, `xl`. |
+
 
 #### Content (`ui/content/`)
 
-| Component | Description |
-|-----------|-------------|
+
+| Component | Description                     |
+| --------- | ------------------------------- |
 | CodeBlock | Syntax-highlighted code display |
+
 
 #### Marketing (`ui/marketing/`)
 
-| Component | Description |
-|-----------|-------------|
-| Logo | Auto-generated monogram badge — renders the first letter of `siteConfig.name` on the active brand color. Five sizes: `sm`, `md`, `lg`, `xl`, `2xl`. No logo file required. |
-| CTA | Call-to-action sections with slot-based composition |
-| NpmCopyButton | NPM install command with copy-to-clipboard |
-| SocialProof | Testimonial and trust indicator cards |
-| TerminalDemo | Animated terminal demonstration (React) |
+
+| Component     | Description                                                                                                                                                                |
+| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Logo          | Auto-generated monogram badge — renders the first letter of `siteConfig.name` on the active brand color. Five sizes: `sm`, `md`, `lg`, `xl`, `2xl`. No logo file required. |
+| CTA           | Call-to-action sections with slot-based composition                                                                                                                        |
+| NpmCopyButton | NPM install command with copy-to-clipboard                                                                                                                                 |
+| SocialProof   | Testimonial and trust indicator cards                                                                                                                                      |
+| TerminalDemo  | Animated terminal demonstration (React)                                                                                                                                    |
+
 
 ### Pattern Components (7)
 
-| Component | Description |
-|-----------|-------------|
-| ContactForm | Complete contact form with validation |
-| NewsletterForm | Email subscription form |
-| FormField | Reusable form field wrapper |
-| SearchInput | Search input with icon |
-| PasswordInput | Password input with visibility toggle |
-| StatCard | Statistics display card |
-| EmptyState | Empty state placeholder with icon and action |
+
+| Component      | Description                                  |
+| -------------- | -------------------------------------------- |
+| ContactForm    | Complete contact form with validation        |
+| NewsletterForm | Email subscription form                      |
+| FormField      | Reusable form field wrapper                  |
+| SearchInput    | Search input with icon                       |
+| PasswordInput  | Password input with visibility toggle        |
+| StatCard       | Statistics display card                      |
+| EmptyState     | Empty state placeholder with icon and action |
+
 
 ### Other Categories
 
-| Category | Count | Components |
-|----------|-------|------------|
-| Hero | 1 | Hero section with centered/split layouts, grid pattern, and typing effect |
-| Layout | 6 | Header (with scroll progress bar), Footer, ThemeModeDropdown, ThemeSelector, ThemeSelectorDropdown, Analytics |
-| Blog | 4 | ArticleHero, BlogCard, ShareButtons, RelatedPosts |
-| Landing | 5 | Credibility, LighthouseScores, TechStack, FeatureTabs, and more |
-| SEO | 3 | SEO, JsonLd, Breadcrumbs |
+
+| Category | Count | Components                                                                                                    |
+| -------- | ----- | ------------------------------------------------------------------------------------------------------------- |
+| Hero     | 1     | Hero section with centered/split layouts, grid pattern, and typing effect                                     |
+| Layout   | 6     | Header (with scroll progress bar), Footer, ThemeModeDropdown, ThemeSelector, ThemeSelectorDropdown, Analytics |
+| Blog     | 4     | ArticleHero, BlogCard, ShareButtons, RelatedPosts                                                             |
+| Landing  | 5     | Credibility, LighthouseScores, TechStack, FeatureTabs, and more                                               |
+| SEO      | 3     | SEO, JsonLd, Breadcrumbs                                                                                      |
+
 
 ### Usage Example
 
@@ -743,10 +748,12 @@ The floating header changes its appearance as the user scrolls. When the page is
 
 A thin 2px brand-coloured bar on the header edge that grows from left to right as the user scrolls, showing reading progress at a glance. Enable it with two props on the `<Header>` component:
 
-| Prop | Type | Default | What it does |
-|------|------|:-------:|--------------|
-| `showScrollProgress` | `boolean` | `false` | Renders the progress bar |
-| `scrollProgressPosition` | `'top'` \| `'bottom'` | `'bottom'` | Edge of the header where the bar sits |
+
+| Prop                     | Type                 | Default    | What it does                          |
+| ------------------------ | -------------------- | ---------- | ------------------------------------- |
+| `showScrollProgress`     | `boolean`            | `false`    | Renders the progress bar              |
+| `scrollProgressPosition` | `'top'` | `'bottom'` | `'bottom'` | Edge of the header where the bar sits |
+
 
 The bar is enabled by default on three page types: the **homepage** (above the floating header), the **blog index**, and **individual blog posts** (both below the solid bar header). Use `scrollProgressPosition="top"` on a floating capsule header and `'bottom'` on a solid bar header. The bar colour always matches `--color-brand-500` and updates instantly when the visitor switches themes.
 
@@ -758,21 +765,23 @@ Cards throughout the site lift slightly on hover (`-translate-y-1`) and gain a s
 
 The full animation library is defined in `src/styles/global.css`. These classes are used by components throughout the site:
 
-| Class | What it does |
-|-------|-------------|
-| `animate-fade-in` | Fades an element from transparent to visible (0.5s ease-out) |
-| `animate-slide-up` | Slides an element up from 12px below while fading in (0.5s ease-out) |
-| `animate-slide-down` | Slides an element down from 12px above while fading in (0.5s ease-out) |
-| `animate-dropdown-in` | Slides and scales a dropdown menu into view (0.2s spring) |
-| `animate-dropdown-out` | Collapses a dropdown menu out of view (0.15s) |
-| `animate-sheet-up` | Slides a bottom sheet up from off-screen (0.25s spring) |
-| `animate-menu-down` | Slides the mobile navigation drawer open (0.25s spring) |
-| `animate-tab-enter` | Crossfades tab panel content when switching tabs |
-| `animate-toast-in` | Slides a toast notification in from the right (350ms spring) |
-| `animate-tooltip-in` | Fades and scales a tooltip into view |
-| `animate-pulse` | Breathing pulse for skeleton loading states |
-| `animate-spin` | Continuous rotation for loading spinners |
-| `animate-shake` | Brief shake for error feedback (400ms) |
+
+| Class                  | What it does                                                           |
+| ---------------------- | ---------------------------------------------------------------------- |
+| `animate-fade-in`      | Fades an element from transparent to visible (0.5s ease-out)           |
+| `animate-slide-up`     | Slides an element up from 12px below while fading in (0.5s ease-out)   |
+| `animate-slide-down`   | Slides an element down from 12px above while fading in (0.5s ease-out) |
+| `animate-dropdown-in`  | Slides and scales a dropdown menu into view (0.2s spring)              |
+| `animate-dropdown-out` | Collapses a dropdown menu out of view (0.15s)                          |
+| `animate-sheet-up`     | Slides a bottom sheet up from off-screen (0.25s spring)                |
+| `animate-menu-down`    | Slides the mobile navigation drawer open (0.25s spring)                |
+| `animate-tab-enter`    | Crossfades tab panel content when switching tabs                       |
+| `animate-toast-in`     | Slides a toast notification in from the right (350ms spring)           |
+| `animate-tooltip-in`   | Fades and scales a tooltip into view                                   |
+| `animate-pulse`        | Breathing pulse for skeleton loading states                            |
+| `animate-spin`         | Continuous rotation for loading spinners                               |
+| `animate-shake`        | Brief shake for error feedback (400ms)                                 |
+
 
 Animation delay utilities (`.delay-0` through `.delay-5`, in 50ms steps) let you stagger multiple elements into view.
 

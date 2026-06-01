@@ -12,9 +12,12 @@ import {
   getPostUrl,
   getPublishedPosts,
   tagToSlug,
+  isBlogEnabled,
 } from '@/lib/blog';
 
 export async function getStaticPaths() {
+  if (!isBlogEnabled()) return [];
+
   // Inlined because Astro's getStaticPaths runs in its own isolated
   // scope and can't see frontmatter-level consts.
   const TAG_CLOUD_LIMIT = 10;

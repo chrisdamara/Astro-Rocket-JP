@@ -1,8 +1,10 @@
 import type { APIRoute, GetStaticPaths } from 'astro';
-import { collectTags, getPublishedPosts, tagToSlug } from '@/lib/blog';
+import { collectTags, getPublishedPosts, isBlogEnabled, tagToSlug } from '@/lib/blog';
 import { renderOgSvg } from '@/lib/og';
 
 export const getStaticPaths: GetStaticPaths = async () => {
+  if (!isBlogEnabled()) return [];
+
   const posts = await getPublishedPosts('en');
   const tags = collectTags(posts);
 

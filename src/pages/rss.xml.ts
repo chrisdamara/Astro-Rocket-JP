@@ -1,6 +1,7 @@
 import { getCollection } from 'astro:content';
 import type { APIContext } from 'astro';
 import siteConfig from '@/config/site.config';
+import { isBlogEnabled } from '@/lib/blog';
 
 /**
  * Escapes XML special characters
@@ -22,6 +23,10 @@ function formatRfc822Date(date: Date): string {
 }
 
 export async function GET(context: APIContext) {
+  if (!isBlogEnabled()) {
+    return new Response('Not Found', { status: 404 });
+  }
+
   // Get only English, non-draft posts for RSS
   const posts = await getCollection('blog', ({ data }) =>
     data.locale === 'en' && !data.draft

@@ -6,6 +6,12 @@
  * conventions without drifting.
  */
 import { getCollection, type CollectionEntry } from 'astro:content';
+import siteConfig from '@/config/site.config';
+
+/** Whether blog pages, nav links, RSS, and homepage blog blocks are active. */
+export function isBlogEnabled(): boolean {
+  return siteConfig.blog?.enabled !== false;
+}
 
 /** Number of regular (non-featured) posts shown per blog index page. */
 export const BLOG_POSTS_PER_PAGE = 12;

@@ -7,6 +7,17 @@ import tailwindcss from '@tailwindcss/vite';
 import vercel from '@astrojs/vercel';
 import netlify from '@astrojs/netlify';
 import i18nConfig from './src/config/i18n.config.ts';
+import siteConfig from './src/config/site.config.ts';
+
+const blogDisabled = siteConfig.blog?.enabled === false;
+const blogRedirects = blogDisabled
+  ? {
+      '/blog': '/404',
+      '/blog/[...slug]': '/404',
+      '/blog/page/[page]': '/404',
+      '/blog/tag/[tag]': '/404',
+    }
+  : {};
 
 const isNetlify = process.env.DEPLOY_TARGET === 'netlify';
 
@@ -33,6 +44,7 @@ export default defineConfig({
   adapter: isNetlify ? netlify() : vercel(),
   site: process.env.SITE_URL || 'https://example.com',
   ...(astroI18nOptions ? { i18n: astroI18nOptions } : {}),
+  redirects: blogRedirects,
 
   build: {
     inlineStylesheets: 'always',
@@ -61,7 +73,9 @@ export default defineConfig({
   integrations: [
     react(),
     mdx(),
-    sitemap(),
+    sitemap({
+      filter: (page) => !(blogDisabled && page.includes('/blog')),
+    }),
     icon(),
   ],
 

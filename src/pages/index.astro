@@ -10,6 +10,7 @@ import LighthouseScores from '@/components/landing/LighthouseScores.astro';
 import LetterGlitchBand from '@/components/patterns/LetterGlitchBand.astro';
 import { getCollection } from 'astro:content';
 import siteConfig from '@/config/site.config';
+import { isBlogEnabled } from '@/lib/blog';
 
 const projectItems = await getCollection('projects', ({ data }) => !data.draft);
 const featuredProjects = projectItems
@@ -17,12 +18,15 @@ const featuredProjects = projectItems
   .sort((a, b) => a.data.order - b.data.order)
   .slice(0, 4);
 
-const posts = (await getCollection('blog', ({ data }) => !data.draft))
-  .sort((a, b) => {
-    if (a.data.featured !== b.data.featured) return a.data.featured ? -1 : 1;
-    return b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf();
-  })
-  .slice(0, 3);
+const showBlog = isBlogEnabled();
+const posts = showBlog
+  ? (await getCollection('blog', ({ data }) => !data.draft))
+      .sort((a, b) => {
+        if (a.data.featured !== b.data.featured) return a.data.featured ? -1 : 1;
+        return b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf();
+      })
+      .slice(0, 3)
+  : [];
 ---
 
 <LandingLayout
@@ -155,7 +159,13 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
             variant="elevated"
             hover
             padding="none"
-            href={project.data.placeholder ? undefined : `/projects/${project.id.replace(/\.mdx?$/, '')}`}
+            href={
+              project.data.placeholder
+                ? undefined
+                : project.data.url ?? `/projects/${project.id.replace(/\.mdx?$/, '')}`
+            }
+            target={project.data.url ? '_blank' : undefined}
+            rel={project.data.url ? 'noopener noreferrer' : undefined}
             class="group flex flex-col"
             data-reveal
           >
@@ -317,6 +327,7 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
     </div>
   </section>
 
+  {showBlog && (
   <!-- Blog -->
   <section class="relative z-10 py-[var(--space-section-md)] bg-background border-t border-border">
     <div class="mx-auto max-w-6xl px-6 flex flex-col gap-8">
@@ -350,6 +361,7 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
       </div>
     </div>
   </section>
+  )}
 
  <!-- CTA -->
   <section class="relative z-10 py-[var(--space-section-md)] bg-background-secondary border-t border-border">

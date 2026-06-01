@@ -14,12 +14,15 @@ import {
   collectTopTags,
   getPostUrl,
   getPublishedPosts,
+  isBlogEnabled,
 } from '@/lib/blog';
 
 /** How many of the most-used tags to surface in the cloud. */
 const TAG_CLOUD_LIMIT = 10;
 
 export async function getStaticPaths() {
+  if (!isBlogEnabled()) return [];
+
   const posts = await getPublishedPosts('en');
   const nonFeatured = posts.filter((p) => !p.data.featured);
   const regularPostsAll = nonFeatured.length > 0 ? nonFeatured : posts;

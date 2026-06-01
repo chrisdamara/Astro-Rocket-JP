@@ -8,6 +8,7 @@ import Badge from '@/components/ui/data-display/Badge/Badge.astro';
 import Card from '@/components/ui/data-display/Card/Card.astro';
 import Button from '@/components/ui/form/Button/Button.astro';
 import { Hero } from '@/components/hero';
+import { isBlogEnabled } from '@/lib/blog';
 
 const recoveryLinks = [
   {
@@ -16,12 +17,16 @@ const recoveryLinks = [
     description: 'Selected work and case studies.',
     href: '/projects',
   },
-  {
-    icon: 'book',
-    title: 'Blog',
-    description: 'Notes on design, code, and the craft.',
-    href: '/blog',
-  },
+  ...(isBlogEnabled()
+    ? [
+        {
+          icon: 'book',
+          title: 'Blog',
+          description: 'Notes on design, code, and the craft.',
+          href: '/blog',
+        },
+      ]
+    : []),
   {
     icon: 'mail',
     title: 'Contact',
@@ -56,10 +61,12 @@ const recoveryLinks = [
         <Icon name="arrow-left" size="sm" />
         Back to home
       </Button>
-      <Button href="/blog" variant="outline" size="lg">
-        Browse the blog
-        <Icon name="arrow-right" size="sm" />
-      </Button>
+      {isBlogEnabled() && (
+        <Button href="/blog" variant="outline" size="lg">
+          Browse the blog
+          <Icon name="arrow-right" size="sm" />
+        </Button>
+      )}
     </div>
   </Hero>
 

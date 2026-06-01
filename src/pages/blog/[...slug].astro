@@ -1,8 +1,11 @@
 ---
 import BlogLayout from '@/layouts/BlogLayout.astro';
 import { getCollection, render } from 'astro:content';
+import { isBlogEnabled } from '@/lib/blog';
 
 export async function getStaticPaths() {
+  if (!isBlogEnabled()) return [];
+
   const posts = await getCollection('blog', ({ data }) => {
     return data.locale === 'en' && (import.meta.env.PROD ? data.draft !== true : true);
   });

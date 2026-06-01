@@ -72,7 +72,7 @@ export function createProfessionalServiceSchema(): WithContext<LocalBusiness> {
         }
       : {}),
     areaServed: [
-      { '@type': 'Country', name: 'Netherlands' },
+      { '@type': 'Country', name: 'UK' },
       { '@type': 'Country', name: 'Worldwide' },
     ],
     sameAs: siteConfig.socialLinks,

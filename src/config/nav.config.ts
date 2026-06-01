@@ -13,6 +13,8 @@
  *                      by the active footer layout.
  */
 
+import siteConfig from '@/config/site.config';
+
 export interface NavItem {
   label: string;
   href: string;
@@ -23,6 +25,13 @@ export interface NavItem {
 export interface LegalLink {
   label: string;
   href: string;
+}
+
+function withoutBlog(items: NavItem[]): NavItem[] {
+  if (siteConfig.blog?.enabled === false) {
+    return items.filter((item) => item.href !== '/blog');
+  }
+  return items;
 }
 
 export const navItems: NavItem[] = [
@@ -47,7 +56,7 @@ export const legalLinks: LegalLink[] = [];
  * Get header navigation items sorted by order
  */
 export function getNavItems(): NavItem[] {
-  return [...navItems].sort((a, b) => a.order - b.order);
+  return withoutBlog([...navItems]).sort((a, b) => a.order - b.order);
 }
 
 /**
@@ -56,7 +65,7 @@ export function getNavItems(): NavItem[] {
  * above to add/remove links in the footer only.
  */
 export function getFooterNavItems(): NavItem[] {
-  return [...footerNavItems].sort((a, b) => a.order - b.order);
+  return withoutBlog([...footerNavItems]).sort((a, b) => a.order - b.order);
 }
 
 /**

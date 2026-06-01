@@ -45,7 +45,13 @@ const projects = items.sort((a, b) => a.data.order - b.data.order);
               variant="elevated"
               hover
               padding="none"
-              href={project.data.placeholder ? undefined : `/projects/${project.id.replace(/\.mdx?$/, '')}`}
+              href={
+                project.data.placeholder
+                  ? undefined
+                  : project.data.url ?? `/projects/${project.id.replace(/\.mdx?$/, '')}`
+              }
+              target={project.data.url ? '_blank' : undefined}
+              rel={project.data.url ? 'noopener noreferrer' : undefined}
               class="group flex flex-col"
               data-reveal
             >

@@ -1,8 +1,11 @@
 import type { APIRoute, GetStaticPaths } from 'astro';
 import { getCollection } from 'astro:content';
 import { renderOgSvg } from '@/lib/og';
+import { isBlogEnabled } from '@/lib/blog';
 
 export const getStaticPaths: GetStaticPaths = async () => {
+  if (!isBlogEnabled()) return [];
+
   const posts = await getCollection('blog', ({ data }) => {
     return data.locale === 'en' && (import.meta.env.PROD ? data.draft !== true : true);
   });
