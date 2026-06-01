@@ -7,9 +7,12 @@ export type { I18nConfig };
  * Environment variables (Astro/Vercel safe)
  * IMPORTANT: must use PUBLIC_* in Vercel + .env
  */
-const SITE_URL = import.meta.env.PUBLIC_SITE_URL;
-const GOOGLE_SITE_VERIFICATION = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
-const BING_SITE_VERIFICATION = import.meta.env.PUBLIC_BING_SITE_VERIFICATION;
+const SITE_URL = 'https://astro-rocket-jp.vercel.app/';
+const GOOGLE_SITE_VERIFICATION =
+  import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION ?? '';
+
+const BING_SITE_VERIFICATION =
+  import.meta.env.PUBLIC_BING_SITE_VERIFICATION ?? '';
 
 export interface SiteConfig {
   name: string;
@@ -110,8 +113,8 @@ const siteConfig: SiteConfig = {
   socialLinks: ['https://github.com/limeweb'],
 
   verification: {
-    google: GOOGLE_SITE_VERIFICATION,
-    bing: BING_SITE_VERIFICATION,
+    google: GOOGLE_SITE_VERIFICATION || undefined,
+    bing: BING_SITE_VERIFICATION || undefined,
   },
 
   authorImage: '/avatar.svg',
