@@ -9,6 +9,8 @@ import netlify from '@astrojs/netlify';
 import i18nConfig from './src/config/i18n.config.ts';
 import siteConfig from './src/config/site.config.ts';
 
+const blogDisabled = siteConfig.blog?.enabled === false;
+
 const blogRedirects = blogDisabled
   ? {
       '/blog': '/404',

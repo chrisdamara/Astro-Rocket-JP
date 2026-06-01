@@ -43,7 +43,7 @@
     "@astrojs/netlify": "^7.0.11",
     "@astrojs/react": "5.0.0",
     "@astrojs/sitemap": "^3.7.3",
-    "@astrojs/vercel": "^8.2.11",
+    "@astrojs/vercel": "^10.0.8",
     "@fontsource-variable/jetbrains-mono": "^5.2.8",
     "@fontsource-variable/manrope": "^5.2.8",
     "@fontsource-variable/outfit": "^5.2.8",

@@ -1,8 +1,10 @@
 
-
-
-import { SITE_URL, GOOGLE_SITE_VERIFICATION, BING_SITE_VERIFICATION } from 'astro:env/server';
 import i18nConfig, { type I18nConfig } from './i18n.config';
+
+/** Read at build time (Vercel env vars + local .env). Avoid astro:env here — this file is imported from astro.config.mjs. */
+const SITE_URL = process.env.SITE_URL;
+const GOOGLE_SITE_VERIFICATION = process.env.GOOGLE_SITE_VERIFICATION;
+const BING_SITE_VERIFICATION = process.env.BING_SITE_VERIFICATION;
 
 export { i18nConfig };
 export type { I18nConfig };
