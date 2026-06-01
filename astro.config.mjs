@@ -9,8 +9,6 @@ import netlify from '@astrojs/netlify';
 import i18nConfig from './src/config/i18n.config.ts';
 import siteConfig from './src/config/site.config.ts';
 
-const blogDisabled = siteConfig.blog?.enabled === false;
-
 const blogRedirects = blogDisabled
   ? {
       '/blog': '/404',
@@ -39,7 +37,7 @@ const astroI18nOptions = i18nEnabled
 
 export default defineConfig({
   output: 'static',
-  adapter: undefined,
+  adapter: isNetlify ? netlify() : vercel(),
   site: process.env.SITE_URL || 'https://example.com',
   ...(astroI18nOptions ? { i18n: astroI18nOptions } : {}),
   redirects: blogRedirects,
