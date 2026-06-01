@@ -10,12 +10,10 @@ import i18nConfig from './src/config/i18n.config.ts';
 import siteConfig from './src/config/site.config.ts';
 
 const blogDisabled = siteConfig.blog?.enabled === false;
+
 const blogRedirects = blogDisabled
   ? {
       '/blog': '/404',
-      '/blog/[...slug]': '/404',
-      '/blog/page/[page]': '/404',
-      '/blog/tag/[tag]': '/404',
     }
   : {};
 
@@ -41,7 +39,7 @@ const astroI18nOptions = i18nEnabled
 
 export default defineConfig({
   output: 'static',
-  adapter: isNetlify ? netlify() : vercel(),
+  adapter: undefined,
   site: process.env.SITE_URL || 'https://example.com',
   ...(astroI18nOptions ? { i18n: astroI18nOptions } : {}),
   redirects: blogRedirects,
